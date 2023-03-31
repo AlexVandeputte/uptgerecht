@@ -5,6 +5,16 @@
 body {
     background-color: hsl(2, 44%, 23%);
 }
+.scroll-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+.scroll-wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: #D79655;
+  outline: 1px solid slategrey;
+}
 .mobile-nav {
     display: flex;
     position: fixed;
@@ -95,19 +105,153 @@ body {
     font-size: 0.9rem;
 }
 hr {
-    border-top: 3px solid #D79655;
+    border: 5px solid #D79655;
 }
 
+.about-us {
+    display: flex;
+    flex-direction: column;
+    
+}
+.scroll-wrapper {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    overflow-x: scroll;
+    gap: 5%;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+.about-us li {
+    display: list-item;
+    min-width: 90%;
+    list-style-type: none;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.foto-home {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+.foto-home img {
+    width: 300px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+.foto-home li {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.openingsuren-home {
+    display: flex;
+
+    flex-direction: column;
+    list-style-type: none;
+}
+.openingsuren-wrapper{
+    width: 65%;
+    align-self: center;
+    flex-direction: column;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    gap: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.openingsuren-home li {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 1.7em;
+}
+.openingsuren-home div {
+    padding: 0.3em;
+    text-align: center;
+}
+
+.location-home {
+    display: flex;
+    flex-direction: column;
+}
+.location-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.location-wrapper iframe{
+    align-self: center;
+    width: 70%;
+    aspect-ratio: 5/3;
+}
+
+h2 {
+    align-self: center;
+    padding: 2%;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #D79655;
+    font-weight: bold;
+}
+hr {
+    align-self: center;
+    width: 90%;
+}
+
+
+/* extra small phone screen */
 @media only screen and (min-width: 340px) {
     .hero-text p { 
         font-size: 1.1rem;
     }
+
+
 }
+
+/* small phone screen */
 @media only screen and (min-width: 470px) {
     .hero-text p { 
         font-size: 1.3rem;
     }
+    .openingsuren-home li {
+        color: white;
+        font-size: 1.7em;
+    }
+    .openingsuren-home div {
+        display: flex; 
+        justify-content: space-between;
+        padding: 0.3em;
+    }
 }
+@media only screen and (min-width: 470px) {
+    .openingsuren-wrapper{
+        width: 80%;
+    }
+
+}
+@media only screen and (min-width: 550px) {
+    .openingsuren-wrapper{
+        width: 70%;
+    }
+
+}
+
+/* phone screen */
+
 @media only screen and (min-width: 690px) {
     .hero-links {
         display: flex;
@@ -123,7 +267,27 @@ hr {
     .hero-links li {
         width: 45%;
     }
+
+    .about-us li {
+        min-width: 50%;
+    }
+    .openingsuren-wrapper{
+        width: 50%;
+    }
+
 }
+
+@media only screen and (min-width: 950px) {
+    .openingsuren-wrapper{
+        width: 35%;
+    }
+    .location-wrapper iframe{
+        width: 50%;
+    }
+    
+}
+
+/* pc screen */
 @media only screen and (min-width: 1280px) {
     html {
         font-size: 24px;
@@ -141,7 +305,7 @@ hr {
         margin-right: auto;
         margin-left: auto;
     }
-    .desktop-nav a {
+    .desktop-nav a{
         line-height: 2rem;
         font-size: 1.5rem;
         text-decoration: none;
@@ -171,11 +335,23 @@ hr {
     .hero-text p{
         font-size: 1rem;
     }
+    .openingsuren-home li {
+        font-size: 1.1em;
+    }
 }
 
+/* big pc screen */
 @media only screen and (min-width: 1500px) {
     html {
         font-size: 36px;
+    }
+    .openingsuren-wrapper{
+        width: 40%;
+    }
+}
+@media only screen and (min-width: 1700px) {
+    .openingsuren-wrapper{
+        width: 30%;
     }
 }
 
@@ -198,3 +374,5 @@ hr {
         width: 200px;
     }
 }
+
+
